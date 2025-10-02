@@ -110,7 +110,7 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #fbbf24 100%);
@@ -399,6 +399,12 @@ body {
 /* Sections */
 .section {
     padding: 40px 0;
+}
+
+#introduction {
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .section-header {
@@ -810,6 +816,31 @@ body {
     transform: translateY(-1px);
 }
 
+.venue-phone {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.venue-phone i {
+    margin-right: 10px;
+    color: #1e40af;
+}
+
+.venue-phone-link {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.venue-phone-link:hover {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+    transform: translateY(-1px);
+}
+
 .venue-details {
     margin-bottom: 2rem;
 }
@@ -871,37 +902,60 @@ body {
 .map-placeholder {
     width: 100%;
     height: 400px;
-    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #6b7280;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.map-placeholder:hover {
-    background: linear-gradient(135deg, #d1d5db, #9ca3af);
+.venue-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.map-placeholder:hover .venue-image {
+    transform: scale(1.05);
+}
+
+.map-placeholder:hover .map-overlay {
+    background: rgba(0, 0, 0, 0.7);
     transform: translateY(-2px);
 }
 
-.map-placeholder i {
+.map-overlay i {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: #9ca3af;
+    color: #fbbf24;
 }
 
-.map-placeholder p {
+.map-overlay p {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
-.map-placeholder small {
+.map-overlay small {
     font-size: 0.9rem;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .venue-map iframe {
