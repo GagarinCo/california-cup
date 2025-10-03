@@ -52,6 +52,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/spike.mp4" type="video/mp4">
+            <source src="videos/spike.webm" type="video/webm">
+            <!-- Fallback for browsers that don't support video -->
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-content">
             <div class="hero-main">
                 <div class="hero-title">
@@ -79,11 +85,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="volleyball-animation">
-                <i class="fas fa-volleyball-ball"></i>
             </div>
         </div>
     </section>
@@ -135,8 +136,8 @@
             <div class="schedule-content">
                 <div class="schedule-day">
                     <div class="day-header">
-                        <h3>Saturday, October 25th, 2025</h3>
-                        <span class="day-subtitle">California Cup 2025</span>
+                        <h3 class="day-subtitle">California Cup 2025</h3>
+                        <span><b>Saturday, October 25, 2025</b><span>
                     </div>
                     <div class="schedule-events">
                         <div class="event">
@@ -439,43 +440,70 @@
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <p>Championship Match</p>
+                        <img src="images/photo1.jpg" alt="Volleyball tournament action shot" class="gallery-img">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <p>Team Celebrations</p>
+                        <img src="images/photo2.png" alt="Team celebrations" class="gallery-img">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <p>Action Shots</p>
+                        <img src="images/photo3.png" alt="Volleyball action shots" class="gallery-img">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <p>Award Ceremony</p>
+                        <img src="images/photo4.jpeg" alt="Award ceremony" class="gallery-img">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <p>Fan Moments</p>
+                        <img src="images/photo5.png" alt="Fan moments" class="gallery-img">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-image">
-                        <i class="fas fa-image"></i>
-                        <p>Behind the Scenes</p>
+                        <img src="images/photo6.jpeg" alt="Behind the scenes" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/photo7.jpeg" alt="Volleyball tournament highlights" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/photo8.jpeg" alt="Player celebrations" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/photo9.jpeg" alt="Volleyball action" class="gallery-img">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/photo10.jpeg" alt="Tournament moments" class="gallery-img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <img id="lightbox-img" src="" alt="" class="lightbox-image">
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+                <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+            </div>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -491,7 +519,7 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                     <br>
-                    <p>Made with <i class="fas fa-heart heart-icon"></i> for volleyball lovers by <a href="https://gagarinco.github.io/kalynovsky/" target="_blank" class="portfolio-link">Kalynovsky</a></p>
+                    <p>Made with <i class="fas fa-heart heart-icon"></i> for volleyball enthusiasts by <a href="https://gagarinco.github.io/kalynovsky/" target="_blank" class="portfolio-link">Kalynovsky</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
