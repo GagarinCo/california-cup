@@ -320,6 +320,27 @@ function initGalleryLightbox() {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', initGalleryLightbox);
 
+// Visitor counter functionality
+function initVisitorCounter() {
+    const visitorCountElement = document.getElementById('visitor-count');
+    if (!visitorCountElement) return;
+    
+    // Get current count from localStorage or start at 0
+    let currentCount = parseInt(localStorage.getItem('visitorCount')) || 0;
+    
+    // Increment the count
+    currentCount++;
+    
+    // Save the new count to localStorage
+    localStorage.setItem('visitorCount', currentCount.toString());
+    
+    // Update the display
+    visitorCountElement.textContent = currentCount.toLocaleString();
+}
+
+// Initialize visitor counter when DOM is loaded
+document.addEventListener('DOMContentLoaded', initVisitorCounter);
+
 // Load Google Maps on demand
 function loadMap() {
     const placeholder = document.querySelector('.map-placeholder');
